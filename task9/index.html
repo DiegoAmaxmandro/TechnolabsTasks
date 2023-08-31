@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test javaScript</title>
+</head>
+<body>
+    <script>
+        let earlyRegister = true;
+        let raceNumber
+
+
+        let name = prompt("What's your name?");
+        let userName = name;
+        let age = prompt(`Hello ${userName} what's your age?`);
+        let runnerAge = age;
+        
+
+        if(runnerAge > 18 && earlyRegister){
+            raceNumber = Math.floor(Math.random() * 1000) + 1000;
+        }else{
+            raceNumber = Math.floor(Math.random() * 1000);
+        }
+
+        if(runnerAge > 18 && earlyRegister){
+            alert(`${userName} your race starts at 9:30 am and your race number is ${raceNumber}, good luck!`);
+        }else if(runnerAge > 18 && !earlyRegister){
+            alert(`${userName} your race starts at 11:00 am and your race number is ${raceNumber}, good luck!`);
+        }else if(runnerAge < 18){
+            alert(`${userName} your race starts at 12:30 pm and your race number is ${raceNumber}, good luck!`);
+        }else{
+            alert(`${userName} please go to registration desck to verify your situation.`)
+        }
+
+
+       
+
+    </script>
+</body>
+</html>
